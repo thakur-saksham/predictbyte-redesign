@@ -1,58 +1,75 @@
-# PredictByte — Premium Landing Page
+Company Website
 
-An Awwwards-style landing page redesign built with React, TypeScript, Tailwind
-CSS, Framer Motion, GSAP/ScrollTrigger and Lenis smooth scrolling.
+A modern, responsive business website showcasing services, industries served, our workflow, and project portfolio.
 
-## Stack
+🚀 Features
 
-- **React 19 + Vite + TypeScript**
-- **Tailwind CSS** — dark-only design system, colors/type/spacing tokens live in `tailwind.config.ts`
-- **Framer Motion** — micro-interactions, page-load choreography, hover states
-- **GSAP + ScrollTrigger** — the pinned "Engineering Cycle" scroll section
-- **Lenis** — smooth-scroll, synced to GSAP's ticker so ScrollTrigger stays accurate
-- **react-icons** — Feather (`fi`), Simple Icons (`si`) and Font Awesome (`fa`) sets
 
-## Getting started
+Clean, professional homepage
+Detailed services overview
+Industries we serve
+Step-by-step process breakdown
+Project showcase/portfolio
 
-```bash
+
+📸 Screenshots
+
+Homepage
+
+<p align="center">
+<img src="preview/homepage.png"/>
+</p>
+
+Services
+
+<p align="center">
+<img src="preview/services"/>
+</p>
+
+
+Industries
+
+<p align="center">
+<img src="preview/industries.png"/>
+</p>
+
+
+Our Process
+
+<p align="center">
+<img src="preview/our process.png"/>
+</p>
+
+
+Projects
+
+<p align="center">
+<img src="preview/projects.png"/>
+</p>
+
+🛠️ Tech Stack
+
+
+HTML5 / CSS3 / JavaScript
+(update with your actual stack, e.g. React, Next.js, Tailwind CSS, etc.)
+
+
+📦 Installation
+
+bash# Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+# Navigate into the project directory
+cd your-repo-name
+
+# Install dependencies
 npm install
-npm run dev       # http://localhost:5173
-```
 
-```bash
-npm run build      # production build to /dist
-npm run preview    # serve the production build locally
-```
+# Run the development server
+npm run dev
 
-## What's implemented
+🤝 Contributing
 
-- Floating glass navbar that shrinks and blurs more on scroll, with a fullscreen animated mobile menu
-- Custom cursor with distinct states for text, buttons, images (`DRAG`) and links — add `data-cursor="button" | "text" | "image" | "link"` to any element to opt it in
-- Fullscreen video hero with staged reveal (navbar → headline lines → paragraph → buttons → scroll cue)
-- Infinite logo marquee, pausable on hover
-- Large horizontal service panels with hover-reveal descriptions
-- Apple-style full-viewport storytelling section for "Why PredictByte"
-- Pinned, scroll-scrubbed "Engineering Cycle" section (GSAP ScrollTrigger) with a crossfading detail card
-- Featured-projects carousel with a cursor-tilt laptop mockup
-- Interactive tech-stack grid, auto-sliding testimonials, and a minimal FAQ accordion
-- Reduced-motion support (`prefers-reduced-motion`) and visible keyboard focus states throughout
+Contributions, issues, and feature requests are welcome. Feel free to check the issues page.
 
-## Notes on the brief
-
-- The brief called for **shadcn/ui**; every interactive element here (buttons, accordion, carousel) was hand-built instead to match the bespoke glass/serif language exactly — dropping in default shadcn primitives would have fought the "not a generic SaaS site" brief. If you want shadcn wired in for a specific future component, it's a quick add (`npx shadcn@latest init`).
-- The hero video URL from the brief is wired in directly (`src/components/Hero.tsx`). If that asset ever moves, swap the `HERO_VIDEO` constant.
-- Fonts load from Google Fonts (`Instrument Serif` + `Inter`) via `index.html` — swap to self-hosted files there if you'd rather not depend on Google's CDN.
-- `FeaturedProjects` currently ships four gradient placeholder "screens" instead of real product screenshots — drop real images/video into `PROJECTS` in `src/components/FeaturedProjects.tsx` when you have assets.
-- Company names in the marquee, testimonials and case studies are placeholder copy — swap for real logos/quotes before shipping.
-
-## Project structure
-
-```
-src/
-  components/       # one file per section/component
-  hooks/useLenis.ts # smooth-scroll + GSAP ticker sync
-  lib/utils.ts       # cn() class-merge helper
-  index.css          # Tailwind layers, cursor + glass utilities
-  App.tsx            # section composition
-tailwind.config.ts    # color/type/layout tokens from the brief
-```
+📄 License
