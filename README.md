@@ -57,7 +57,7 @@ HTML5 / CSS3 / JavaScript
 📦 Installation
 
 bash# Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/thakur-saksham/predictbyte-redesign
 
 # Navigate into the project directory
 cd your-repo-name
@@ -73,3 +73,4 @@ npm run dev
 Contributions, issues, and feature requests are welcome. Feel free to check the issues page.
 
 📄 License
+This project is licensed under the MIT License.
