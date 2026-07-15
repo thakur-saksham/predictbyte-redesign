@@ -1,0 +1,327 @@
+@import url('https://db.onlinewebfonts.com/c/e66905e07608167a84e6ad52f638c3c6?family=Helvetica+Now+Var');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-color: #050816;
+    overflow-x: hidden;
+    color: #ffffff;
+  }
+
+  ::selection {
+    background: rgba(79, 140, 255, 0.35);
+    color: #ffffff;
+  }
+
+  /* Hide native cursor on devices with a mouse only */
+  @media (hover: hover) and (pointer: fine) {
+    body,
+    a,
+    button,
+    input,
+    textarea,
+    select {
+      cursor: none;
+    }
+  }
+
+  :focus-visible {
+    outline: 2px solid #4f8cff;
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+
+  .glass {
+    /* slightly more transparent glass for a lighter feel */
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Light theme: toggle by setting html[data-theme="light"] */
+  :root {
+    --pb-primary: #ffffff;
+    --pb-muted: rgba(255, 255, 255, 0.18);
+  }
+
+  html[data-theme="light"] body {
+    background-color: #ffffff;
+    color: #071428;
+  }
+  html[data-theme="light"] {
+    --pb-primary: #071428;
+    --pb-muted: rgba(7, 20, 40, 0.35);
+  }
+  html[data-theme="light"] .bg-bg,
+  html[data-theme="light"] [class~="bg-bg"],
+  html[data-theme="light"] .bg-\[\#040710\],
+  html[data-theme="light"] .bg-\[\#050816\] {
+    background-color: #ffffff !important;
+  }
+  html[data-theme="light"] .bg-\[\#090d18\],
+  html[data-theme="light"] .bg-\[\#0a0f1d\]\/80,
+  html[data-theme="light"] .bg-\[\#0a0f1c\] {
+    background-color: #f3f4f6 !important;
+    border-color: rgba(0,0,0,0.1) !important;
+  }
+  html[data-theme="light"] .industry-graphic-bg {
+    background-color: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0,0,0,0.08) !important;
+  }
+  html[data-theme="light"] .industry-glow {
+    display: none !important;
+  }
+  html[data-theme="light"] .bg-white\/5 {
+    background-color: rgba(0,0,0,0.04) !important;
+    border-color: rgba(0,0,0,0.08) !important;
+  }
+  html[data-theme="light"] .border-white\/5, 
+  html[data-theme="light"] .border-white\/10 {
+    border-color: rgba(0,0,0,0.08) !important;
+  }
+  html[data-theme="light"] [class*="text-white"] {
+    color: #071428 !important;
+  }
+  html[data-theme="light"] .text-white\/80,
+  html[data-theme="light"] .text-white\/70,
+  html[data-theme="light"] .text-white\/60,
+  html[data-theme="light"] .text-white\/50,
+  html[data-theme="light"] .text-white\/40 {
+    color: #42526b !important;
+  }
+  html[data-theme="light"] .text-secondary {
+    color: #42526b !important;
+  }
+  
+  /* Keep Hero section text white since the video is always dark */
+  html[data-theme="light"] #home .text-white {
+    color: #ffffff !important;
+  }
+  html[data-theme="light"] #home .text-white\/90 {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+  html[data-theme="light"] #home .text-white\/70 {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  html[data-theme="light"] .border-border {
+    border-color: rgba(7, 20, 40, 0.12) !important;
+  }
+  html[data-theme="light"] .industry-video-card {
+    background: #ffffff !important;
+    box-shadow: 0 18px 45px -22px rgba(7, 20, 40, 0.25) !important;
+  }
+  html[data-theme="light"] .industry-image {
+    opacity: 0 !important;
+  }
+  html[data-theme="light"] .industry-video-overlay {
+    opacity: 0.16;
+  }
+  html[data-theme="light"] .glass {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(10,20,40,0.06);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+  }
+}
+
+/* Make logo visible in dark mode by converting black logo to white */
+html:not([data-theme="light"]) .brand-logo,
+html:not([data-theme="light"]) footer .mx-auto > span:first-child,
+html:not([data-theme="light"]) .fixed .font-serif.text-lg.text-white {
+  filter: brightness(0) invert(1);
+}
+
+/* Book a Call button — white variant of the Uiverse "cssbuttons-io-button" */
+.book-call-btn {
+  background: #ffffff;
+  color: #050816;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  padding-right: 3.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  height: 2.8em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: inset 0 0 1.6em -0.6em rgba(5, 8, 22, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-call-btn:hover {
+  transform: scale(1.03);
+}
+
+.book-call-btn__icon {
+  background: #050816;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em rgba(5, 8, 22, 0.35);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.book-call-btn__icon svg {
+  width: 1.1em;
+  color: #ffffff;
+  transition: transform 0.3s;
+}
+
+.book-call-btn:hover .book-call-btn__icon {
+  width: calc(100% - 0.6em);
+}
+
+.book-call-btn:hover .book-call-btn__icon svg {
+  transform: translateX(0.1em);
+}
+
+.book-call-btn:active .book-call-btn__icon {
+  transform: scale(0.95);
+}
+
+.book-call-btn--lg {
+  font-size: 16px;
+  height: 3.1em;
+  padding-left: 1.4em;
+  padding-right: 3.6em;
+}
+
+/* Book-call form, adapted from the provided Uiverse layout. */
+.book-call-form {
+  display: flex;
+  width: min(450px, 100%);
+  max-height: calc(100vh - 2rem);
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.book-call-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  display: grid;
+  height: 34px;
+  width: 34px;
+  place-items: center;
+  border-radius: 50%;
+  color: #151717;
+  transition: background-color 0.2s ease;
+}
+
+.book-call-close:hover { background: #f0f1f2; }
+
+.book-call-label { color: #151717; font-size: 14px; font-weight: 600; }
+
+.book-call-input {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  padding: 0 12px;
+  color: #59616a;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.book-call-input:focus-within { border-color: #2d79f3; }
+
+.book-call-input input,
+.book-call-input textarea {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: #151717;
+  font: inherit;
+  font-size: 14px;
+  outline: 0;
+}
+
+.book-call-input input::placeholder,
+.book-call-input textarea::placeholder { color: #8a9199; }
+
+.book-call-textarea { align-items: flex-start; padding-top: 14px; }
+.book-call-textarea textarea { min-height: 76px; resize: vertical; }
+
+.book-call-submit {
+  margin-top: 10px;
+  height: 50px;
+  width: 100%;
+  border-radius: 10px;
+  background: #151717;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.book-call-submit:hover { background: #252727; }
+
+.brand-logo,
+footer .mx-auto > span:first-child,
+.fixed .font-serif.text-lg.text-white {
+  display: block;
+  width: 180px;
+  height: 48px;
+  background: url("/predictbyte-logo-new.png") center / contain no-repeat;
+  font-size: 0 !important;
+  line-height: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

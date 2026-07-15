@@ -1,0 +1,7 @@
+<svg width="190" height="52" viewBox="0 0 190 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 45V7h12.4c10.7 0 17.2 5.5 17.2 14.2 0 9-6.7 14.6-17.7 14.6h-4.6V45H10Z" fill="#101010"/>
+  <path d="M17.3 29.2h5.1c6.2 0 9.7-2.7 9.7-7.9 0-5-3.5-7.7-9.5-7.7h-5.3v15.6Z" fill="#D19C00"/>
+  <circle cx="35.5" cy="25.5" r="8.6" fill="#D19C00"/>
+  <text x="42" y="34" fill="#D19C00" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">redict</text>
+  <text x="111" y="34" fill="#121212" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Byte</text>
+</svg>
