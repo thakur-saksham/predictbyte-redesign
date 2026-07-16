@@ -23,7 +23,7 @@ Homepage
 Services
 
 <p align="center">
-<img src="preview/services"/>
+<img src="preview/services.png"/>
 </p>
 
 
